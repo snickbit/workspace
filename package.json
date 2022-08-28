@@ -21,8 +21,11 @@
 		"onlyChanged": true,
 		"passWithNoTests": true,
 		"preset": "ts-jest",
-		"silent": true,
-		"testEnvironment": "node"
+		"testEnvironment": "node",
+		"projects": [
+			"<rootDir>/clis/*",
+			"<rootDir>/libraries/*"
+		]
 	},
 	"devDependencies": {
 		"@snickbit/eslint-config": "1.3.2",
