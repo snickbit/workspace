@@ -17,9 +17,7 @@
 	"scripts": {
 		"build": "pnpm run bundle --minify",
 		"bundle": "esbuild --bundle --outfile=bin/{{name}} src/index.ts --target=node12 --platform=node",
-		"bundle:meta": "pnpm run bundle --minify --metafile=.meta.json",
 		"clean": "shx rm -rf ./bin",
-		"depcheck": "depcheck",
 		"dev": "pnpm run bundle --sourcemap",
 		"start": "node bin/{{name}}",
 		"watch": "pnpm run dev --watch"

@@ -37,7 +37,7 @@
 			"inputs": ["src/**/*.tsx", "src/**/*.ts", "typedoc.json"]
 		},
 		"//#test": {
-			"dependsOn": ["@snickbit/utilities#build", "^build"],
+			"dependsOn": ["^build"],
 			"outputs": []
 		},
 		"//#lint": {
@@ -46,10 +46,6 @@
 		"//#fix": {
 			"outputs": ["**/*.ts", "**/*.json"],
 			"outputMode": "new-only"
-		},
-		"depcheck": {
-			"inputs": ["package.json"],
-			"outputs": []
 		},
 		"clean": {
 			"inputs": [".types/**", "dist/**"],

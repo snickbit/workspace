@@ -16,9 +16,7 @@
 	},
 	"scripts": {
 		"build": "esbuild --bundle --outfile=bin/{{name}} src/index.ts --target=node12 --platform=node --external:shelljs",
-		"build:meta": "pnpm run build --minify --metafile=.meta.json",
 		"clean": "shx rm -rf ./bin",
-		"depcheck": "depcheck",
 		"dev": "pnpm run build --sourcemap",
 		"prod": "pnpm run build --minify",
 		"start": "node bin/{{name}}",
