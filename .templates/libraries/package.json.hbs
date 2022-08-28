@@ -1,0 +1,37 @@
+{
+	"name": "{{name}}",
+	"description": ">> TODO: Description",
+	"version": "0.0.0",
+	"license": "MIT",
+	"preferGlobal": true,
+	"bin": {
+		"{{name}}": "./bin/{{name}}"
+	},
+	"main": "./bin/{{name}}",
+	"files": [
+		"bin"
+	],
+	"engines": {
+		"node": ">= 12"
+	},
+	"scripts": {
+		"build": "pnpm run bundle --minify",
+		"bundle": "esbuild --bundle --outfile=bin/{{name}} src/index.ts --target=node12 --platform=node",
+		"bundle:meta": "pnpm run bundle --minify --metafile=.meta.json",
+		"clean": "shx rm -rf ./bin",
+		"depcheck": "depcheck",
+		"dev": "pnpm run bundle --sourcemap",
+		"start": "node bin/{{name}}",
+		"watch": "pnpm run dev --watch"
+	},
+	"dependencies": {
+		"@snickbit/node-cli": "latest",
+		"@snickbit/node-utilities": "^4.3.1",
+		"@snickbit/out": "latest"
+	},
+	"devDependencies": {
+		"esbuild": "^0.14.38",
+		"shx": "^0.3.4",
+		"typescript": "^4.6.3"
+	}
+}

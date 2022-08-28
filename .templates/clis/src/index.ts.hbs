@@ -1,0 +1,15 @@
+#!/usr/bin/env node
+
+import {$out, defaultConfig} from './common.ts.hbs'
+import {version} from '../package.json'
+import cli from '@snickbit/node-cli'
+
+cli()
+	.name('@remedyred/{{name}}')
+	.version(version)
+	.config(defaultConfig)
+	.run(main)
+
+export default async function main(/* argv */) {
+	$out.info('Hello, world!')
+}
