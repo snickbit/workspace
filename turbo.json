@@ -1,0 +1,68 @@
+{
+	"$schema": "https://turborepo.org/schema.json",
+	"pipeline": {
+		"build": {
+			"inputs": [
+				"src/**",
+				"*.json",
+				"../../tsup.config.json"
+			],
+			"dependsOn": ["^build"],
+			"outputs": ["dist/**"],
+			"outputMode": "new-only"
+		},
+		"build:types": {
+			"dependsOn": ["^build"],
+			"outputs": ["dist/**/*.d.ts"],
+			"outputMode": "new-only"
+		},
+		"dev": {
+			"inputs": [
+				"src/**",
+				"*.json",
+				"../../tsup.config.json"
+			],
+			"dependsOn": ["^dev"],
+			"outputs": ["dist/**"],
+			"outputMode": "new-only"
+		},
+		"dev:types": {
+			"dependsOn": ["^dev"],
+			"outputs": [".types"],
+			"outputMode": "new-only"
+		},
+		"docs": {
+			"dependsOn": ["^build"],
+			"outputs": ["docs/**", "README.md"],
+			"inputs": ["src/**/*.tsx", "src/**/*.ts", "typedoc.json"]
+		},
+		"//#test": {
+			"dependsOn": ["@snickbit/utilities#build", "^build"],
+			"outputs": []
+		},
+		"//#lint": {
+			"outputs": []
+		},
+		"//#fix": {
+			"outputs": ["**/*.ts", "**/*.json"],
+			"outputMode": "new-only"
+		},
+		"depcheck": {
+			"inputs": ["package.json"],
+			"outputs": []
+		},
+		"clean": {
+			"inputs": [".types/**", "dist/**"],
+			"outputs": [".types/**", "dist/**"]
+		},
+		"release": {
+			"dependsOn": ["^build", "//#lint", "//#test"],
+			"outputs": ["CHANGELOG.md", "package.json", "docs/**", "README.md"]
+		},
+		"//#release:ci": {
+			"dependsOn": ["$GITHUB_TOKEN", "$NPM_TOKEN"],
+			"outputs": ["CHANGELOG.md", "package.json", "docs/**", "README.md"],
+			"outputMode": "new-only"
+		}
+	}
+}

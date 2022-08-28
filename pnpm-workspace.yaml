@@ -1,0 +1,4 @@
+shared-workspace-lockfile: false
+packages:
+  - "libraries/*"
+  - "clis/*"

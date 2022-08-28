@@ -1,0 +1,24 @@
+# hidden folders & junk files
+.*/
+.*
+*.iml
+
+# Submodules
+*/*
+
+# Log files
+logs/
+*.log
+
+# Dependencies
+node_modules/
+
+# Compiled files
+dist/
+
+# Keep
+!.git*
+!.eslintignore
+!.eslintrc.json
+!.depcheckrc
+!.templates/
