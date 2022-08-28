@@ -12,7 +12,6 @@
 		"fix": "eslint \"**/*.{ts,json,yml,yaml}\" --cache --color --fix",
 		"index": "turbo run index",
 		"lint": "eslint \"**/*.{ts,json,yml,yaml}\" --cache --color",
-		"prepare": "husky install",
 		"prerelease": "turbo run build docs ///#fix ///#test depcheck",
 		"release": "turbo run release",
 		"release:ci": "turbo run release --concurrency=1",
