@@ -1,5 +1,5 @@
 {
-	"name": "{{name}}",
+	"name": "@snickbit/{{name}}",
 	"description": ">> TODO: Description",
 	"version": "0.0.0",
 	"license": "MIT",
@@ -15,12 +15,12 @@
 		"node": ">= 12"
 	},
 	"scripts": {
-		"build": "esbuild --bundle --outfile=bin/{{name}} src/index.ts --target=node12 --platform=node --external:shelljs",
+		"build": "pnpm run bundle --minify",
+		"bundle": "esbuild --bundle --outfile=bin/{{name}} src/index.ts --target=node12 --platform=node",
 		"clean": "shx rm -rf ./bin",
-		"dev": "pnpm run build --sourcemap",
-		"prod": "pnpm run build --minify",
+		"dev": "pnpm run bundle --sourcemap",
 		"start": "node bin/{{name}}",
-		"watch": "pnpm run build --watch"
+		"watch": "pnpm run dev --watch"
 	},
 	"dependencies": {
 		"@snickbit/node-cli": "~1.0.56",
