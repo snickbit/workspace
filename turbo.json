@@ -36,7 +36,7 @@
 			"outputs": ["docs/**", "README.md"],
 			"inputs": ["src/**/*.tsx", "src/**/*.ts", "typedoc.json"]
 		},
-		"//#test": {
+		"test": {
 			"dependsOn": ["^build"],
 			"outputs": []
 		},
@@ -52,7 +52,7 @@
 			"outputs": [".types/**", "dist/**"]
 		},
 		"release": {
-			"dependsOn": ["^build", "//#lint", "//#test"],
+			"dependsOn": ["^build", "//#lint", "test"],
 			"outputs": ["CHANGELOG.md", "package.json", "docs/**", "README.md"]
 		},
 		"//#release:ci": {
