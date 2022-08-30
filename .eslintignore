@@ -6,4 +6,6 @@ dist/
 
 bin/
 
+examples/
+
 pnpm-lock.yaml
