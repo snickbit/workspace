@@ -15,7 +15,6 @@ export default function(plop) {
 	})
 
 	const dotfiles = [
-		'.depcheckrc',
 		'.eslintignore',
 		'.gitignore',
 		'.eslintrc.json'

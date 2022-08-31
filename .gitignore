@@ -20,7 +20,6 @@ dist/
 !.git*
 !.eslintignore
 !.eslintrc.json
-!.depcheckrc
 !.templates/
 !.templates/**
 !.npmrc
