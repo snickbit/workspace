@@ -12,7 +12,7 @@
 			"outputMode": "new-only"
 		},
 		"build:types": {
-			"dependsOn": ["^build"],
+			"dependsOn": ["build"],
 			"outputs": ["dist/**/*.d.ts"],
 			"outputMode": "new-only"
 		},
@@ -27,17 +27,21 @@
 			"outputMode": "new-only"
 		},
 		"dev:types": {
-			"dependsOn": ["^dev"],
+			"dependsOn": ["dev"],
 			"outputs": [".types"],
 			"outputMode": "new-only"
 		},
 		"docs": {
-			"dependsOn": ["^build"],
+			"dependsOn": ["build"],
 			"outputs": ["docs/**", "README.md"],
 			"inputs": ["src/**/*.tsx", "src/**/*.ts", "typedoc.json"]
 		},
 		"test": {
-			"dependsOn": ["^build"],
+			"dependsOn": ["build"],
+			"outputs": []
+		},
+		"test:ci": {
+			"dependsOn": ["build"],
 			"outputs": []
 		},
 		"//#lint": {
@@ -49,10 +53,10 @@
 		},
 		"clean": {
 			"inputs": [".types/**", "dist/**"],
-			"outputs": [".types/**", "dist/**"]
+			"outputs": []
 		},
 		"release": {
-			"dependsOn": ["^build", "//#lint", "test"],
+			"dependsOn": ["build", "//#lint", "test"],
 			"outputs": ["CHANGELOG.md", "package.json", "docs/**", "README.md"]
 		},
 		"//#release:ci": {
