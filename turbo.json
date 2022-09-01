@@ -40,6 +40,10 @@
 			"dependsOn": ["^build"],
 			"outputs": []
 		},
+		"test:ci": {
+			"dependsOn": ["^build"],
+			"outputs": []
+		},
 		"//#lint": {
 			"outputs": []
 		},
