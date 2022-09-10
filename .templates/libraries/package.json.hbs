@@ -18,7 +18,7 @@
 		"build": "pnpm run bundle --dts --minify",
 		"bundle": "tsup",
 		"clean": "shx rm -rf ./dist ",
-		"dev": "concurrently -k -c magenta,cyan pnpm:dev:*",
+		"dev": "concurrently -c magenta,cyan pnpm:dev:*",
 		"dev:build": "pnpm run bundle --sourcemap",
 		"dev:types": "tsc --project ./tsconfig.types.json",
 		"docs": "typedoc",
