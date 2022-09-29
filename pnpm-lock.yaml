@@ -6,7 +6,7 @@ specifiers:
   execa: 6.1.0
   jest: 28.1.3
   node-plop: 0.31.0
-  npm-check-updates: 16.1.0
+  npm-check-updates: 16.3.3
   plop: 3.1.1
   shx: 0.3.4
   ts-jest: 28.0.8
@@ -19,7 +19,7 @@ devDependencies:
   execa: 6.1.0
   jest: 28.1.3
   node-plop: 0.31.0
-  npm-check-updates: 16.1.0
+  npm-check-updates: 16.3.3
   plop: 3.1.1
   shx: 0.3.4
   ts-jest: 28.0.8_oavexkd2euoi6eueqpz7c42uqe
@@ -4053,8 +4053,8 @@ packages:
       npm-normalize-package-bin: 2.0.0
     dev: true
 
-  /npm-check-updates/16.1.0:
-    resolution: {integrity: sha512-0oEuD//2DVCjewNq4u0oJyciT5WRSPAz3B0IDnh8rGunrSXy0vXX17DFeI0XOT28mvUWrBtPbjz2Zptd2wvpNQ==}
+  /npm-check-updates/16.3.3:
+    resolution: {integrity: sha512-8qdciOLfDUDX8HbK0vnF2sDaOdoUAmpyYGWfWxGDmpMTiMY30lnz6Qvz0TDPd4qhjFS9S8Ca4VJ9rS+hysY9Og==}
     engines: {node: '>=14.14'}
     hasBin: true
     dependencies:
@@ -4083,6 +4083,7 @@ packages:
       semver-utils: 1.1.4
       source-map-support: 0.5.21
       spawn-please: 1.0.0
+      untildify: 4.0.0
       update-notifier: 6.0.2
       yaml: 2.1.1
     transitivePeerDependencies:
@@ -5501,6 +5502,11 @@ packages:
     engines: {node: '>=12'}
     dependencies:
       crypto-random-string: 4.0.0
+    dev: true
+
+  /untildify/4.0.0:
+    resolution: {integrity: sha512-KK8xQ1mkzZeg9inewmFVDNkg3l5LUhoq9kN6iWYB/CC9YMG8HA+c1Q8HwDe6dEX7kErrEVNVBO3fWsVq5iDgtw==}
+    engines: {node: '>=8'}
     dev: true
 
   /update-browserslist-db/1.0.7_browserslist@4.21.3:
