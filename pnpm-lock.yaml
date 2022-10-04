@@ -1,7 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
-  '@snickbit/eslint-config': 1.3.6
+  '@snickbit/eslint-config': 1.3.7
   eslint: 8.24.0
   execa: 6.1.0
   jest: 28.1.3
@@ -14,7 +14,7 @@ specifiers:
   typescript: 4.8.4
 
 devDependencies:
-  '@snickbit/eslint-config': 1.3.6_wikzf3zjzdwilmbukvfvhniz4m
+  '@snickbit/eslint-config': 1.3.7_wikzf3zjzdwilmbukvfvhniz4m
   eslint: 8.24.0
   execa: 6.1.0
   jest: 28.1.3
@@ -795,8 +795,8 @@ packages:
       '@sinonjs/commons': 1.8.3
     dev: true
 
-  /@snickbit/eslint-config/1.3.6_wikzf3zjzdwilmbukvfvhniz4m:
-    resolution: {integrity: sha512-zs8jlgHMq2hNH58A3u2e45qsDSoMQjS/qvg7ayuW/uHhHHEX5uldzqUUAjpTHXvKM2/lHw+edrmDSqQDbDuRVA==}
+  /@snickbit/eslint-config/1.3.7_wikzf3zjzdwilmbukvfvhniz4m:
+    resolution: {integrity: sha512-zxfOv/CyvF+/LyD3GOHldwnsukdrqHWRhNoTvnM1YjRiO0nuoE/qa0dA6z+VbMvvEsRUfCUyMejhLR8cNLdqDA==}
     engines: {node: '>= 12'}
     peerDependencies:
       eslint: '>= 8.19.0'
